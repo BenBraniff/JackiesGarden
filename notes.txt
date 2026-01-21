@@ -33,4 +33,19 @@ JSON
 npm run deploy
 
 
+(7)
+Make sure the repo is Public
+Caution: This repository is private but the published site will be public.
 
+(8)
+# In the github repo > settings > Pages
+Deploy from a Branch >
+gh-pages /(root)
+
+(9)
+# in the "vite.config.js" file add the base
+
+export default defineConfig({
+  plugins: [react()],
+  base: "/JackiesGarden/"
+})
