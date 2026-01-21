@@ -49,3 +49,8 @@ export default defineConfig({
   plugins: [react()],
   base: "/JackiesGarden/"
 })
+
+
+Now everytime you make a change to the page... don't forget to run the command:
+"npm run deploy"
+which will update the gh-pages branch which is what the website is displaying from. 
