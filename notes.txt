@@ -32,6 +32,10 @@ JSON
 (6)
 npm run deploy
 
+(6.5)
+Change build to dist? Or don't?
+  "deploy": "gh-pages -d dist",
+
 
 (7)
 Make sure the repo is Public
@@ -45,12 +49,76 @@ gh-pages /(root)
 (9)
 # in the "vite.config.js" file add the base
 
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/JackiesGarden/"
-})
+  base: "/JackiesGarden/",
+});
+
 
 
 Now everytime you make a change to the page... don't forget to run the command:
 "npm run deploy"
-which will update the gh-pages branch which is what the website is displaying from. 
+which will update the gh-pages branch which is what the website is displaying from.
+
+
+3d model
+
+1. 
+npm install three
+npm install @react-three/fiber 
+npm install @react-three/drei
+
+2. 
+if you change the default name from 'scene' to 'garden',
+open scene.gltf file and Ctr + F "buffers" change 'scenes.bin' to 'garden.bin'
+
+cd into the folder where the .gltf file is stored,
+run the command:
+npx gltfjsx garden.gltf 
+
+3. 
+in Earth.jsx file...
+change
+  export function Model(props) {
+to 
+  export default function Model(props) {
+
+4. 
+// import stuff for 3d render
+import { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import Garden from '../public/garden'
+
+... in the return { }
+<Canvas>
+  <ambientLight />
+  <OrbitControls />
+  <Suspense fallback={null}>
+    <Garden />
+  </Suspense>
+</Canvas>
+
+
+in the Earth.jsx file...
+change
+  const { nodes, materials } = useGLTF('/earth.gltf')
+to
+  const { nodes, materials } = useGLTF('/earth/earth.gltf')
+
+and
+
+change
+useGLTF.preload('/earth.gltf')
+to
+useGLTF.preload('/earth/earth.gltf')
+
+Now because I'm using github pages and JackiesGarden is on .io/JackiesGarden/...
+from
+/earth/earth.gltf
+to
+./earth/earth.gltf 
