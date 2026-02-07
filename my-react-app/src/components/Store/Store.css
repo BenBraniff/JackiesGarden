@@ -1,0 +1,44 @@
+.store-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  font-family: sans-serif;
+  background-color: #aaa;
+  height: 100vh;
+  color: white;
+}
+
+.item-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto; /* Enables horizontal scroll */
+  padding-bottom: 15px; /* Space for the scrollbar */
+  scrollbar-width: thin; /* For Firefox */
+}
+
+/* Optional: Styling the scrollbar for Chrome/Safari */
+.item-row::-webkit-scrollbar {
+  height: 8px;
+}
+.item-row::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.item-card {
+  flex: 0 0 200px; /* Prevents cards from shrinking; sets width to 200px */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  color: black;
+}
+
+.item-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}

@@ -121,4 +121,26 @@ Now because I'm using github pages and JackiesGarden is on .io/JackiesGarden/...
 from
 /earth/earth.gltf
 to
-./earth/earth.gltf 
+./earth/earth.gltf
+
+
+2/6/2026
+Home
+Store
+3d Map
+About
+menu
+
+npm install react-router-dom
+
+Delete the node_modules folder.
+Delete the package-lock.json
+Clean the cache and reinstall:
+npm cache clean --force
+npm install
+
+npm ls react
+
+npm install @boxicons/react
+
+npm install lucide-react

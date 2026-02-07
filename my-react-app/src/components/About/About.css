@@ -1,0 +1,26 @@
+.aboutpage {
+  background-color: #aaa;
+  height: 100vh;
+  padding: 20px;
+  font-family: sans-serif;
+  color: white;
+
+  /* This is the magic for centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center;     /* Centers horizontally */
+  text-align: center;      /* Centers the text inside the tags */
+}
+
+/* Optional: keeps the paragraph from stretching too wide */
+.aboutpage p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+section {
+    background-color: #777;
+    border-radius: 20px;
+    padding: 20px;
+}

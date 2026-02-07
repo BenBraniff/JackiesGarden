@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* This prevents any accidental scrolling */
+}
+
+.video-container {
+  width: 100%;
+  height: 100vh; /* Viewport height */
+  position: relative;
+  overflow: hidden; /* Ensures video doesn't overflow container */
+}
+
+.video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ensures the video covers the entire container without stretching */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Pushes the video behind other content */
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+
+  /* Change this */
+  justify-content: flex-start;
+
+  /* Add this to push it down slightly from the top */
+  padding-top: 120px;
+
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+    transition: color 0.3s ease;
+
+}
+
+.menu-button:hover {
+    color: grey;
+}
+
+.logo-image {
+  max-width: 300px;
+}
