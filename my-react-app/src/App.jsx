@@ -1,6 +1,8 @@
 // import { useState } from "react";
 // import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+// No basename needed for HashRouter usually
 import Homepage from "./components/Home/Homepage";
 import Store from "./components/Store/Store";
 import Map from "./components/Map/Map";
@@ -10,7 +12,8 @@ import Navbar from "./components/navbar/navbar";
 function App() {
   return (
     <>
-      <Router basename="/JackiesGarden">
+      {/* <Router basename="/JackiesGarden"> */}
+      <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
