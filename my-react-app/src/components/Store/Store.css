@@ -5,8 +5,20 @@
   padding: 20px;
   font-family: sans-serif;
   background-color: #aaa;
-  height: 100vh;
+  min-height: 100vh; /* This is supposed to enable scrolling */
   color: white;
+  overflow-y: auto; /* Forces vertical scroll capability */
+  -webkit-overflow-scrolling: touch; /* Makes scrolling smooth on iOS */
+}
+
+.title {
+  position: fixed;
+  top: 10;
+  left: 10;
+}
+
+.space {
+  height: 20px;
 }
 
 .item-row {

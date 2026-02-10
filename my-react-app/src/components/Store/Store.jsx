@@ -61,7 +61,8 @@ const storeData = [
 const Store = () => {
   return (
     <div className="store-container">
-      <h1>Store</h1>
+      <h1 className="title">Store</h1>
+      <div className="space"></div>
       {storeData.map((section) => (
         <section key={section.category} className="store-section">
           <h2>{section.category}</h2>

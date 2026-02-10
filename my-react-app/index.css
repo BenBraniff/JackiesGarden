@@ -1,0 +1,9 @@
+html, body, #root {
+  height: auto;
+  min-height: 100%;
+  background-color: #aaa;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents side-to-side wobbling */
+  overflow-y: visible; /* Ensures vertical scrolling is allowed */
+}

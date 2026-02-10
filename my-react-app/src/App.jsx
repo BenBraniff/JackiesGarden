@@ -1,5 +1,4 @@
 // import { useState } from "react";
-// import "./App.css";
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 // No basename needed for HashRouter usually
@@ -8,6 +7,10 @@ import Store from "./components/Store/Store";
 import Map from "./components/Map/Map";
 import About from "./components/About/About";
 import Navbar from "./components/navbar/navbar";
+
+import "./App.css";
+import "../../my-react-app/index.css"
+
 
 function App() {
   return (
