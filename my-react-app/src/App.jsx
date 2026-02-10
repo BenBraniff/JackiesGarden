@@ -8,8 +8,7 @@ import Map from "./components/Map/Map";
 import About from "./components/About/About";
 import Navbar from "./components/navbar/navbar";
 
-import "./App.css";
-import "../../my-react-app/index.css"
+// import "./App.css";
 
 
 function App() {

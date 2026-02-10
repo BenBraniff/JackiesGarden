@@ -61,22 +61,24 @@ const storeData = [
 const Store = () => {
   return (
     <div className="store-container">
-      <h1 className="title">Store</h1>
-      <div className="space"></div>
-      {storeData.map((section) => (
-        <section key={section.category} className="store-section">
-          <h2>{section.category}</h2>
-          <div className="item-row">
-            {section.items.map((item) => (
-              <div key={item.id} className="item-card">
-                <img src={item.img} alt={item.title} />
-                <h3>{item.title}</h3>
-                <p>{item.price}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      ))}
+      <div className="store-body">
+        <h1 className="title">Store</h1>
+        <div className="space"></div>
+        {storeData.map((section) => (
+          <section key={section.category} className="store-section">
+            <h2>{section.category}</h2>
+            <div className="item-row">
+              {section.items.map((item) => (
+                <div key={item.id} className="item-card">
+                  <img src={item.img} alt={item.title} />
+                  <h3>{item.title}</h3>
+                  <p>{item.price}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,14 +1,22 @@
 .store-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   padding: 20px;
   font-family: sans-serif;
   background-color: #aaa;
-  min-height: 100vh; /* This is supposed to enable scrolling */
+  height: 100vh; /* This is supposed to enable scrolling */
   color: white;
   overflow-y: auto; /* Forces vertical scroll capability */
   -webkit-overflow-scrolling: touch; /* Makes scrolling smooth on iOS */
+}
+
+.store-body {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+    gap: 40px;
+
 }
 
 .title {
